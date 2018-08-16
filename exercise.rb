@@ -6,6 +6,10 @@ parties = [
 ]
 
 parties.each do |event|
-  events = parties.sort {|a,b| a[1]<=>b[1]}
-  p events
+  puts event[:city]
+  puts "------------"
+  event[:events].each do |party|
+    puts "Date: #{party[:date]}, #{party[:attendees]} people"
+  end
+  puts "\n"
 end
